@@ -1,46 +1,73 @@
-# Getting Started with Create React App
+# React and Jira Issue Collector
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This code sample highlights a form submission difference between a Jira Issue
+Collector implementation embedding the issue collector in a generic HTML page
+and embedding the issue collector in a Create React App.
 
-## Available Scripts
+# Generic HTML Example
 
-In the project directory, you can run:
+A simple generic HTML implementation located at `./generic-html/index.html`. 
 
-### `npm start`
+**Note**: The generic example works as expected. The HTML script tags are
+included in the head of the file. With a button to trigger the form rendered
+to the screen. When the button is clicked, the form modal is rendered to the
+screen. The form can be filled in, and when the `Submit` button is clicked, 
+the form submission is successful.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# React Example
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+A very simple React app is created, with all the components within the `App.tsx`
+file. The script tags for the issue collector are in the `head` of the 
+`./public/index.html` the same as with the generic HTML example.
 
-### `npm test`
+With the button implementation similar to that of the generic HTML, in a more
+React idiomatic way of calling click event handlers.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Install and start app
 
-### `npm run build`
+```bash
+npm install
+# then
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Behaviour
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Steps:
+1. Install and start the app.
+2. When the app has started go to the [home page](http://localhost:3000)
+3. Click on the button `show issue collector`. This will bring up the Jira issue collector.
+    1. Fill in the form.
+    2. Submit the form.
+    3. **Note:** The form will report and error.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img src="./assets/form.png" width="500px">
 
-### `npm run eject`
+After the submit button has been clicked.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<img src="./assets/form-error.png" width="500px">
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Error object reported in console.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```json
+{
+    "0": {
+        "aborted": 0,
+        "responseText": "<div id=\"root\"><div id=\"seven-json-viewer\"> <div class=\"app-container\"><div class=\"app-content\"><div class=\"json-view\"><section class=\"block \"><button class=\"button button-white block--content__left \"><svg stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" viewBox=\"0 0 24 24\" height=\"1em\" width=\"1em\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 5v14l11-7z\"></path></svg></button><section><span class=\"bracket\">{</span><span class=\"bracket\">}</span></section></section></div></div><div class=\"app-toolbar\"><input class=\"json-path-input\" placeholder=\"$.theater[*].movies\" type=\"text\" value=\"\"></div></div></div></div><div id=\"snackbar\"></div>",
+        "responseXML": null,
+        "status": 0,
+        "statusText": "n/a",
+        "error": {
+            "message": "Unexpected token '<', "<div id="r"... is not valid JSON",
+            "stack": "SyntaxError: Unexpected token '<', "<div id="r"... is not valid JSON\n    at JSON.parse (<anonymous>)\n    at parseJSON (https://d2owm1y91w1zxj.cloudfront.net/atl-vertigo--shard-jira-prod-eu-27--3--jres.atlassian.net/s/collector-resource-d41d8cd98f00b204e9800998ecf8427e-CDN/1jmxwi/b/8/64b53e58c620362cef53692d85289e29/_/download/contextbatch/js/_super/batch.js?locale=en-US:284:10575)\n    at HTMLIFrameElement.g (https://d2owm1y91w1zxj.cloudfront.net/atl-vertigo--shard-jira-prod-eu-27--3--jres.atlassian.net/s/collector-resource-d41d8cd98f00b204e9800998ecf8427e-CDN/1jmxwi/b/8/64b53e58c620362cef53692d85289e29/_/download/contextbatch/js/_super/batch.js?locale=en-US:1416:311)"
+        }
+    },
+    "1": "error",
+    "2": {
+        "message": "Unexpected token '<', "<div id="r"... is not valid JSON",
+        "stack": "SyntaxError: Unexpected token '<', "<div id="r"... is not valid JSON\n    at JSON.parse (<anonymous>)\n    at parseJSON (https://d2owm1y91w1zxj.cloudfront.net/atl-vertigo--shard-jira-prod-eu-27--3--jres.atlassian.net/s/collector-resource-d41d8cd98f00b204e9800998ecf8427e-CDN/1jmxwi/b/8/64b53e58c620362cef53692d85289e29/_/download/contextbatch/js/_super/batch.js?locale=en-US:284:10575)\n    at HTMLIFrameElement.g (https://d2owm1y91w1zxj.cloudfront.net/atl-vertigo--shard-jira-prod-eu-27--3--jres.atlassian.net/s/collector-resource-d41d8cd98f00b204e9800998ecf8427e-CDN/1jmxwi/b/8/64b53e58c620362cef53692d85289e29/_/download/contextbatch/js/_super/batch.js?locale=en-US:1416:311)"
+    }
+}
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

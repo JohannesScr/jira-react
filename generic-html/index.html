@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Jira Issue Collector Example</title>
+    <script type="text/javascript"
+        src="https://jss3.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/1jmxwi/b/8/c95134bc67d3a521bb3f4331beb9b804/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=bb4cdf96"></script>
+    <script type="text/javascript">
+        window.ATL_JQ_PAGE_PROPS = {
+            triggerFunction: function (showCollectorDialog) {
+                window.showCollectorDialog = showCollectorDialog;
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <div>JIRA</div>
+    <div>
+        <button id="openIssueCollector">open issue collector</button>
+    </div>
+
+    <script>
+        let btn = document.querySelector('#openIssueCollector')
+        console.log(btn)
+        btn.addEventListener('click', () => {
+            console.log('btn clicked')
+            window.showCollectorDialog(/*nothing*/)
+        })
+    </script>
+</body>
+
+</html>
