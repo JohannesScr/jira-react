@@ -58,14 +58,14 @@ Error object reported in console.
         "status": 0,
         "statusText": "n/a",
         "error": {
-            "message": "Unexpected token '<', "<div id="r"... is not valid JSON",
-            "stack": "SyntaxError: Unexpected token '<', "<div id="r"... is not valid JSON\n    at JSON.parse (<anonymous>)\n    at parseJSON (https://d2owm1y91w1zxj.cloudfront.net/atl-vertigo--shard-jira-prod-eu-27--3--jres.atlassian.net/s/collector-resource-d41d8cd98f00b204e9800998ecf8427e-CDN/1jmxwi/b/8/64b53e58c620362cef53692d85289e29/_/download/contextbatch/js/_super/batch.js?locale=en-US:284:10575)\n    at HTMLIFrameElement.g (https://d2owm1y91w1zxj.cloudfront.net/atl-vertigo--shard-jira-prod-eu-27--3--jres.atlassian.net/s/collector-resource-d41d8cd98f00b204e9800998ecf8427e-CDN/1jmxwi/b/8/64b53e58c620362cef53692d85289e29/_/download/contextbatch/js/_super/batch.js?locale=en-US:1416:311)"
+            "message":  `Unexpected token '<', "<div id="r"... is not valid JSON`,
+            "stack": `SyntaxError: Unexpected token '<', "<div id="r"... is not valid JSON\n    at JSON.parse (<anonymous>)\n    at parseJSON (https://d2owm1y91w1zxj.cloudfront.net/atl-vertigo--shard-jira-prod-eu-27--3--jres.atlassian.net/s/collector-resource-d41d8cd98f00b204e9800998ecf8427e-CDN/1jmxwi/b/8/64b53e58c620362cef53692d85289e29/_/download/contextbatch/js/_super/batch.js?locale=en-US:284:10575)\n    at HTMLIFrameElement.g (https://d2owm1y91w1zxj.cloudfront.net/atl-vertigo--shard-jira-prod-eu-27--3--jres.atlassian.net/s/collector-resource-d41d8cd98f00b204e9800998ecf8427e-CDN/1jmxwi/b/8/64b53e58c620362cef53692d85289e29/_/download/contextbatch/js/_super/batch.js?locale=en-US:1416:311)`
         }
     },
     "1": "error",
     "2": {
-        "message": "Unexpected token '<', "<div id="r"... is not valid JSON",
-        "stack": "SyntaxError: Unexpected token '<', "<div id="r"... is not valid JSON\n    at JSON.parse (<anonymous>)\n    at parseJSON (https://d2owm1y91w1zxj.cloudfront.net/atl-vertigo--shard-jira-prod-eu-27--3--jres.atlassian.net/s/collector-resource-d41d8cd98f00b204e9800998ecf8427e-CDN/1jmxwi/b/8/64b53e58c620362cef53692d85289e29/_/download/contextbatch/js/_super/batch.js?locale=en-US:284:10575)\n    at HTMLIFrameElement.g (https://d2owm1y91w1zxj.cloudfront.net/atl-vertigo--shard-jira-prod-eu-27--3--jres.atlassian.net/s/collector-resource-d41d8cd98f00b204e9800998ecf8427e-CDN/1jmxwi/b/8/64b53e58c620362cef53692d85289e29/_/download/contextbatch/js/_super/batch.js?locale=en-US:1416:311)"
+        "message": `Unexpected token '<', "<div id="r"... is not valid JSON`,
+        "stack": `SyntaxError: Unexpected token '<', "<div id="r"... is not valid JSON\n    at JSON.parse (<anonymous>)\n    at parseJSON (https://d2owm1y91w1zxj.cloudfront.net/atl-vertigo--shard-jira-prod-eu-27--3--jres.atlassian.net/s/collector-resource-d41d8cd98f00b204e9800998ecf8427e-CDN/1jmxwi/b/8/64b53e58c620362cef53692d85289e29/_/download/contextbatch/js/_super/batch.js?locale=en-US:284:10575)\n    at HTMLIFrameElement.g (https://d2owm1y91w1zxj.cloudfront.net/atl-vertigo--shard-jira-prod-eu-27--3--jres.atlassian.net/s/collector-resource-d41d8cd98f00b204e9800998ecf8427e-CDN/1jmxwi/b/8/64b53e58c620362cef53692d85289e29/_/download/contextbatch/js/_super/batch.js?locale=en-US:1416:311)`
     }
 }
 ```
