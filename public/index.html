@@ -7,11 +7,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>React App</title>
   <script type="text/javascript"
-    src="https://jss3.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/1jmxwi/b/8/c95134bc67d3a521bb3f4331beb9b804/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=bb4cdf96"></script>
+    src="https://jss3.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/1jmxwi/b/8/c95134bc67d3a521bb3f4331beb9b804/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=6ab05cf9"></script>
+  <!-- <script type="text/javascript"
+    src="https://jss3.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/1jmxwi/b/8/c95134bc67d3a521bb3f4331beb9b804/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=bb4cdf96"></script> -->
   <script type="text/javascript">
+    /**
+     * How to set custom field with Atlassian's custom fields: https://support.atlassian.com/jira-cloud-administration/docs/customize-the-jira-issue-collector/
+     * 
+    */
     window.ATL_JQ_PAGE_PROPS = {
       triggerFunction: function (showCollectorDialog) {
         window.showCollectorDialog = showCollectorDialog;
+      },
+      fieldValues: function () {
+        const values = {};
+        values['summary'] = 'hey joe'
+        values['customfield_10068'] = 'https://s3a-dev-vm-1.southafricanorth.cloudapp.azure.com/app/s3?path=Anglo+Coal+Capcoal.aco_ccl_301_cvpsa_001&start_time=2022-12-04T12%3A56%3A43.051Z&end_time=2022-12-05T12%3A56%3A43.051Z&start_time=2022-12-05T12%3A56%3A43.051Z&end_time=2022-12-06T12%3A56%3A43.051Z&site=All&tags=psd_percentiles_2_0'
+        values['customfield_10066'] = 'Anglo Coal Capcoal.aco_ccl_301_cvpsa_001'
+        return values;
       }
     };
   </script>
